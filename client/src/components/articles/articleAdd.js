@@ -16,7 +16,7 @@ function ArticleAdd(props){
         return
             async function postArticle(){
                 try{
-                    axios.post('http://localhost:3001/api/articles/', article)
+                    axios.post('./api/articles/', article)
                     .then(function(res){
                        // const res=await post('/api/articles', article);
                         props.history.push(`/articles/${res.data._id}`);

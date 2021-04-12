@@ -9,7 +9,7 @@ function ArticleEdit(props) {
   useEffect(function() {
     async function getArticle() {
       try {
-        const response = await get(`http://localhost:3001/api/articles/${props.match.params._id}`);
+        const response = await get(`./api/articles/${props.match.params._id}`);
         setArticle(response.data);        
       } catch(error) {
         console.log(error);
@@ -22,7 +22,7 @@ function ArticleEdit(props) {
     event.preventDefault();
     async function updateArticle() {
       try {
-        await patch(`http://localhost:3001/api/articles/${article._id}`, article);
+        await patch(`./api/articles/${article._id}`, article);
         props.history.push(`/articles/${article._id}`);        
       } catch(error) {
         console.log(error);
