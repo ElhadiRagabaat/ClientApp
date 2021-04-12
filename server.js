@@ -11,10 +11,10 @@ const app = express()
 app.use(cors())
 
 
-const LOCAL_DB = "mongodb://127.0.0.1:27017/my_local_db";
-mongoose.connect(process.env.MONGODB_URI || LOCAL_DB, { useNewUrlParser: true });
+//const LOCAL_DB = "mongodb://127.0.0.1:27017/my_local_db";
+//mongoose.connect(process.env.MONGODB_URI || LOCAL_DB, { useNewUrlParser: true });
 //let MONGODB_URI= 'mongodb+srv://ahmad:ahmad@cluster0.vm3fk.mongodb.net/Articles?retryWrites=true&w=majority';
-//mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useFindAndModify: false }); 
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useFindAndModify: false }); 
 mongoose.connection.once('open', function() { 
   console.log('Connected to the Database.');
 });
