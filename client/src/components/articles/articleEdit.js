@@ -53,8 +53,8 @@ function ArticleEdit(props) {
           <textarea name="content" rows="5" value={article.content} onChange={handleChange} className="form-control" />
         </div>
         <div className="btn-group">
-          <button type="submit" className="btn btn-primary">Update</button>
-          <button type="button" onClick={handleCancel} className="btn btn-secondary">Cancel</button>
+          <button type="submit" className="btn btn-primary m-1">Update</button>
+          <button type="button" onClick={handleCancel} className="btn btn-secondary m-1">Cancel</button>
         </div>
       </form>
     </div>

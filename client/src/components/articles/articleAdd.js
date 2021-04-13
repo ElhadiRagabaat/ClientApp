@@ -51,8 +51,8 @@ function ArticleAdd(props){
                         </div>
 
                         <div className = "btn-group">
-                          <input type ="submit" value ="Submit" className="btn btn-primary" />
-                          <button type ="button" onClick={handleCancel} className="btn btn-secondary">Cancel</button>
+                          <input type ="submit" value ="Submit" className="btn btn-primary m-2" />
+                          <button type ="button" onClick={handleCancel} className="btn btn-secondary m-2">Cancel</button>
                      </div>
                  </form>
              </div>

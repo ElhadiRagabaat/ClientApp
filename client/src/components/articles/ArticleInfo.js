@@ -34,9 +34,9 @@ function ArticleInfo(props) {
             <small> {article._id}</small>
             <p>{article.content}</p>
             <div className = "btn-group">
-                <Link to ={`/articles/${article._id}/edit`} className ="btn-primary">Edit</Link>
-                <botton onClick={handleDelete} className ="btn btn-danger">Delete</botton>
-                <Link to="/artcles" className ="btn btn-secondary">Close</Link>
+                <Link to ={`/articles/${article._id}/edit`} className ="btn-primary m-2">Edit</Link>
+                <botton onClick={handleDelete} className ="btn btn-danger m-2">Delete</botton>
+                <Link to="/artcles" className ="btn btn-secondary m-2">Close</Link>
                 </div>
                 <hr />
         </div>
