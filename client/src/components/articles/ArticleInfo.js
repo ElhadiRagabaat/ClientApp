@@ -9,7 +9,7 @@ function ArticleInfo(props) {
         async function getArticle() {
             try {
                   
-                const response = await axios.get(`/api/articles/${props.match.params._id}`);
+                const response = await axios.get(`http://localhost:3001/api/articles/${props.match.params._id}`);
                 console.log(response.data)
                 setArticle(response.data);
 
@@ -21,7 +21,7 @@ function ArticleInfo(props) {
     },[props]);
     async function handleDelete(){
         try {
-            await axios.delete(`/api/articles/${props.match.params._id}`);
+            await axios.delete(`http://localhost:3001/api/articles/${props.match.params._id}`);
             props.history.push("/articles");
         }catch(error){
             console.log('error', error);

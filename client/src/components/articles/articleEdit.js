@@ -22,7 +22,7 @@ function ArticleEdit(props) {
     event.preventDefault();
     async function updateArticle() {
       try {
-        await patch(`/api/articles/${article._id}`, article);
+        await patch(`http://localhost:3001/api/articles/${article._id}`, article);
         props.history.push(`/articles/${article._id}`);        
       } catch(error) {
         console.log(error);
